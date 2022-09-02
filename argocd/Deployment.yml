@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: spring-app-v1
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: spring-app-v1
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring
-          image: imajeetyadav/spring-kubernetes:amd1
+          image: imajeetyadav/spring-kubernetes:amd2
           ports:
             - containerPort: 80
           imagePullPolicy: Always
